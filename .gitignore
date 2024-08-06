@@ -9,9 +9,6 @@
 *.jpeg
 *.gif
 
-# Ignore LLM context file
-LLM_helper_file_context.txt
-
 # Ignore OS files
 .DS_Store
 
