@@ -92,18 +92,18 @@ __all__ = [
 
 
 ## Echo Helpers Content Script
-The `echo_helpers_content.sh` script can be used to output the contents of each file in the `helpers` directory. This is useful for generating context for an LLM.
+The `echo_content_for_llm.sh` script can be used to output the contents of each file. This is useful for generating context for an LLM.
 
 ## Running the Script
 
 1. **Change Permissions**:
    ```bash
-   chmod +x echo_helpers_content.sh
+   chmod +x echo_content_for_llm.sh
    ```
 
 2. **Run the Script**:
    ```bash
-   ./echo_helpers_content.sh > LLM_helper_file_context.txt
+   ./echo_content_for_llm.sh > LLM_helper_file_context.txt
    ```
 
 # Contributing
