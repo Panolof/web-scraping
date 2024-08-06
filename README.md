@@ -1,11 +1,11 @@
-### Author
-**Name**: Panayiotis Pouroullis
+## Author
+**Name**: Pano Pouroullis <br/>
 **Date**: 4th August 2024
 
-### Overview
+# Overview
 This repository contains a modular web scraping framework using Python. The structure is designed to facilitate reusability and maintainability across multiple projects.
 
-### Directory Structure
+# Directory Structure
 ```
 web-scraping/
 ├── projects/
@@ -25,10 +25,10 @@ web-scraping/
 └── README.md
 ```
 
-### Helpers Module
+# Helpers Module
 The `helpers` module provides reusable functions for web scraping, including browser automation, proxy management, HTML parsing, and utility functions.
 
-#### `helpers/__init__.py`
+## `helpers/__init__.py`
 ```python
 
 from .browser import create_driver, fetch_page_with_selenium
@@ -50,7 +50,7 @@ __all__ = [
 
 ```
 
-### Project Setup
+# Project Setup
 1. **Set PYTHONPATH**:
    Ensure Python can locate the `helpers` module by setting the `PYTHONPATH`.
    ```bash
@@ -84,17 +84,17 @@ __all__ = [
    PYTHONPATH="${PYTHONPATH}:/path/to/web-scraping" python /path/to/web-scraping/projects/project1/main.py
    ```
 
-### Usage
+# Usage
 - **Browser Automation**: Use `create_driver` and `fetch_page_with_selenium` for scraping using Selenium.
 - **Proxy Management**: Use `get_proxies` and `rotate_proxies` to handle proxies.
 - **HTML Parsing**: Use `fetch_page`, `parse_html`, and `extract_links` for requests-based scraping and parsing.
 - **Utilities**: Use `setup_logging` and `delay` for logging and managing delays.
 
 
-### Echo Helpers Content Script
+## Echo Helpers Content Script
 The `echo_helpers_content.sh` script can be used to output the contents of each file in the `helpers` directory. This is useful for generating context for an LLM.
 
-#### Running the Script
+## Running the Script
 
 1. **Change Permissions**:
    ```bash
@@ -106,14 +106,36 @@ The `echo_helpers_content.sh` script can be used to output the contents of each 
    ./echo_helpers_content.sh > LLM_helper_file_context.txt
    ```
 
-### Contributing
+# Contributing
 Feel free to submit issues or pull requests. Ensure your code adheres to the project's coding standards.
 
-### License
+# License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-### .gitignore
+# .gitignore
 ```
+# Ignore data files
+*.csv
+*.json
+*.xml
+
+# Ignore images
+*.png
+*.jpg
+*.jpeg
+*.gif
+
 # Ignore LLM context file
 LLM_helper_file_context.txt
+
+# Ignore OS files
+.DS_Store
+
+# Ignore IDE files
+.idea/
+.vscode/
+
+# Ignore log files
+*.log
+
 ```
